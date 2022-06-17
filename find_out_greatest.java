@@ -6,22 +6,23 @@ import java.util.Scanner;
 public class find_out_greatest {
     public static void main( String args[]) {
     	
-    	accept_no();
+    	accept_no(); //call for print the accept-no method
     	
     }
-    public static void accept_no() 
+    public static void accept_no()  //create the method 
     {
-        int[] arr = new int[10];
+    	int size; //decalered the varaiable and datatype is int...
+    	
+    	Scanner sc = new Scanner(System.in); //create scanner object
+    	System.out.print("Please enter the  size of array : "); // get the input from user by help of scanner
+    	size=sc.nextInt();
         
-        System.out.print("Please enter the 10 numbers : ");
-        
+    	System.out.print("Please enter the  numbers : ");
+        int[] arr = new int[size];
         for(int i=0; i<arr.length;i++)
-        {
-            Scanner sc = new Scanner(System.in);
+        {  
             arr[i] = sc.nextInt();
         }
-        
-        
         int max = arr[0];
          for (int i = 1; i < arr.length; i++)
          {
